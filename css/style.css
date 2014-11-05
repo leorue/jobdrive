@@ -1,0 +1,107 @@
+body{
+
+}
+
+h1{
+	font-size: 6em;
+}
+
+.jobpost a{
+	color: #777;
+}
+
+.jobpost:hover a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.nopad{
+	padding: 0;
+	margin: 0;
+}
+
+#careers-header {
+	width: 100%;
+	height: 500px;
+	padding-top: 120px;
+	background: url('../images/break.jpg') no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #efefef;
+	text-align: center;
+}
+
+#board-header {
+	width: 100%;
+	height: 500px;
+	padding-top: 120px;
+	background: #00663B;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #efefef;
+	text-align: center;
+}
+
+#careers-footer {
+	background: #00663B;
+	color: #fff;
+	padding: 70px 0;
+	height: 300px;
+}
+
+#department-header{
+	text-align: center;
+	background: #00663B;
+	color: #efefef;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	padding: 100px 0;
+}
+
+#social-header{
+	text-align: center;
+	background: url('../images/break-1.jpg') no-repeat center center scroll;
+	color: #efefef;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	padding: 100px 0;
+}
+
+.jobpost {
+	width: 100%;
+	background: #efefef;
+	padding: 5%;
+	margin: 0;
+}
+
+.jobpost:hover{
+	background: #00663B;
+}
+
+#testimony{
+	width:100%;
+	background-color:#f7f7f7;
+
+}
+#testimony h1{
+	text-align:center;
+	margin:92px 0 25px 0;
+	color:#565656;
+}
+#testimony p{
+	text-align:center;
+	font-size:14px;
+	color:#959595;
+}
+
+.full-width{
+	width: 100%;
+}

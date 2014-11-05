@@ -1,1 +1,102 @@
-careers.html
+<div class="container-fluid nopad">
+	<header id="careers-header">
+		<h1>{{ title }}</h1>
+		<h4>{{ description }}</h4>
+	</header>
+	<section id="culture-preview">
+
+	</section>
+
+	<section id="testimony">
+			<div class="container">
+				<h1>What People Say About Us</h1>
+				<p>
+					At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas mo
+				</p>
+			</div>
+	</section>
+	<section id="department-header">
+		<h1>Welcome to Vitality!</h1>
+		<h3>Some Slogan</h3>
+	</section>
+	<section id="department-preview">
+		
+	</section>
+	<section id="benefits-preview">
+		
+	</section>
+	<section id="featured-preview">
+		<div class="row jobpost text-center" ng-repeat="(key, post) in posts.postings | limitTo:5">
+			<a href="#{{ jobtitle }}">
+			<h3>{{ posts.postings[key].division }} @ {{ posts.postings[key].location }}</h3>
+			<h1>{{ posts.postings[key].title }}</h1>
+			<p>{{ posts.postings[key].terms }} /// {{ posts.postings[key].salary }}</p>
+			</a>
+		</div>
+	</section>
+	<section id="team-preview">
+			<div class="container">
+				<h1>Our Awesome Team!</h1>
+				<p>
+					At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas mo
+				</p>
+			</div>
+			<div class="row nopad">
+				<div class="col-sm-4 col-md-2 nopad">
+					<img src="images/testimony-image-1.jpg" class="img-responsive full-width" alt="testimony">
+				</div>
+				<div class="col-sm-4 col-md-2 nopad">
+					<img src="images/testimony-image-2.jpg" class="img-responsive full-width" alt="testimony">
+				</div>
+				<div class="col-sm-4 col-md-2 nopad">
+					<img src="images/testimony-image-3.jpg" class="img-responsive full-width" alt="testimony">
+				</div>
+				<div class="col-sm-4 col-md-2 nopad">
+					<img src="images/testimony-image-4.jpg" class="img-responsive full-width" alt="testimony">
+				</div>
+				<div class="col-sm-4 col-md-2 nopad">
+					<img src="images/testimony-image-5.jpg" class="img-responsive full-width" alt="testimony">
+				</div>
+				<div class="col-sm-4 col-md-2 nopad">
+					<img src="images/testimony-image-6.jpg" class="img-responsive full-width" alt="testimony">
+				</div>
+				<div class="col-sm-4 col-md-2 nopad">
+					<img src="images/testimony-image-7.jpg" class="img-responsive full-width" alt="testimony">
+				</div>
+				<div class="col-sm-4 col-md-2 nopad">
+					<img src="images/testimony-image-8.jpg" class="img-responsive full-width" alt="testimony">
+				</div>
+				<div class="col-sm-4 col-md-2 nopad">
+					<img src="images/testimony-image-9.jpg" class="img-responsive full-width" alt="testimony">
+				</div>
+				<div class="col-sm-4 col-md-2 nopad">
+					<img src="images/testimony-image-10.jpg" class="img-responsive full-width" alt="testimony">
+				</div>
+				<div class="col-sm-4 col-md-2 nopad">
+					<img src="images/testimony-image-1.jpg" class="img-responsive full-width" alt="testimony">
+				</div>
+				<div class="col-sm-4 col-md-2 nopad">
+					<img src="images/testimony-image-2.jpg" class="img-responsive full-width" alt="testimony">
+				</div>
+			</div>
+	</section>
+	<section id="social-header">
+		<h1>Welcome to Vitality!</h1>
+		<h3>Pick your theme:</h3>
+	</section>
+	<section id="social-preview">
+		
+	</section>
+	<footer id="careers-footer">
+                <div class="row">
+                    <ul class="list-inline">
+                        <li><a href="#"><i class="fa fa-facebook fa-fw fa-2x"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-twitter fa-fw fa-2x"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
+                        </li>
+                    </ul>
+                </div>
+	</footer>
+</div>

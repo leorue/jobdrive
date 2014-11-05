@@ -1,1 +1,16 @@
-board.html
+<div class="container-fluid nopad">
+	<header id="board-header">
+		<h1>{{ title }}</h1>
+		<h4>{{ description }}</h4>
+	</header>
+	<section id="job-postings">
+	    <input class="jobSearch" type="text" ng-model="dataFilter" placeholder="Search..."/></td>
+		<div class="row jobpost text-center" ng-repeat="(key, post) in posts.postings">
+			<a href="#{{ jobtitle }}">
+			<h3>{{ posts.postings[key].division }} @ {{ posts.postings[key].location }}</h3>
+			<h1>{{ posts.postings[key].title }}</h1>
+			<p>{{ posts.postings[key].terms }} /// {{ posts.postings[key].salary }}</p>
+			</a>
+		</div>
+	</section>
+</div>

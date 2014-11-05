@@ -2,7 +2,7 @@
 	var mainApp = angular.module('mainApp', ['ngRoute','ngResource']);
 
 	// configured routes
-	mainApp.config(function($routeProvider) {
+	mainApp.config(function($routeProvider,$httpProvider) {
 		$routeProvider
 
 		// home page
@@ -28,30 +28,30 @@
 
 	});
 
-	mainApp.controller('mainController', function($scope) {
-		$scope.title = 'Welcome to Job Drive';
-		$scope.slogan = 'The User-Friendly Way to Manage Job Applicaitons';
+	mainApp.controller('mainController', function($scope, $route, Job) {
+		$scope.title = 'Job Drive';
+		$scope.description = 'The User-Friendly Way to Manage Job Applicaitons';
+		$scope.posts = Job.query();
 	});
 
-	mainApp.controller('boardController', function($scope) {
+	mainApp.controller('boardController', function($scope, $route, Job) {
 		$scope.title = 'Job Board';
-		$scope.slogan = 'What job is right for you?';
+		$scope.posts = Job.query();
 	});
 
-	mainApp.controller('descriptionController', function($scope) {
+	mainApp.controller('descriptionController', function($scope, $route, Job) {
 		$scope.title = 'Job Description';
-		$scope.slogan = 'Is this the right job for you?';
+		$scope.posts = Blog.get({id:$stateParams.id});
 	});
 
-	mainApp.controller('applyController', function($scope) {
+	mainApp.controller('applyController', function($scope, Job) {
 		$scope.title = 'Apply';
-		$scope.slogan = 'Are you qualified for the job?';
 	});
 
-  mainApp.factory('Job',function($resource){
-    return $resource('http://localhost:8000/api/jobs/:name',{name:'@name'},{
-        update: {
-            method: 'PUT'
-        }
-    });
-  });
+	mainApp.factory('Job',function($resource){
+    	return $resource(
+    		'https://script.googleusercontent.com/macros/echo?user_content_key=tzU-JwERgLF8smkwzDlXeKoL2cybBXwCfH0Eqh_NDwgRm_QRCmlJASTB2BELaEJySil9XlYjWJPKsPqTdwLaCZAP2xNAC-OGOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa-g9lXNNVtJV7Rr_GYeUUCJJU5Pitn6ub_eV2Dl8PkRqpWzguiGdaYKYYhAvrbViVUi7cO5ZZUmavC3sZeq0jfeyPMfEgH6OimGIga8GCsu0ffv5Q7e0gh3-Km9l3qpx5bQhfbjRRibeHDtW5FagNECg8fkiVzd99A&lib=MRwbFvLyuFBVmvIxNesN15pRWUWnU-0z7&key=AIzaSyBm4WflpfsqPq9vhBfiEi1eptD5t0fRqC0',
+    		{},
+      		{query: { method: 'GET', params:{name:'name'}, isArray: false }}
+    	);
+	});
