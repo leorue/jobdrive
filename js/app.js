@@ -39,7 +39,7 @@
 		$scope.posts = Job.query();
 	});
 
-	mainApp.controller('descriptionController', function($scope, $route, Job) {
+	mainApp.controller('descriptionController', function($scope, $route, $routeParams, Job) {
 		$scope.title = 'Job Description';
 		$scope.posts = Blog.get({id:$routeParams.id});
 		$scope.key = $routeParams.id;
@@ -49,7 +49,7 @@
 		};
 	});
 
-	mainApp.controller('applyController', function($scope, Job) {
+	mainApp.controller('applyController', function($scope, $route, $routeParams, Job) {
 		$scope.title = 'Apply';
 		$scope.posts = Blog.get({id:$routeParams.id});
 		$scope.key = $routeParams.id;
