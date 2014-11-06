@@ -16,12 +16,12 @@
 			controller: 'boardController'
 		})
 
-		.when('/description/:name', {
+		.when('/description/:id', {
 			templateUrl: 'pages/description.html',
 			controller: 'descriptionController'
 		})
 
-		.when('/apply/:name', {
+		.when('/apply/:id', {
 			templateUrl: 'pages/application.html',
 			controller: 'applyController'
 		});
@@ -41,15 +41,18 @@
 
 	mainApp.controller('descriptionController', function($scope, $route, Job) {
 		$scope.title = 'Job Description';
-		$scope.posts = Blog.get({name:$stateParams.name});
+		$scope.posts = Blog.get({id:$routeParams.id});
+		$scope.key = $routeParams.id;
 	   	$scope.searchFilter = function (post) {
 	    var keyword = new RegExp($scope.dataFilter, 'i');
-	    	return !$scope.dataFilter || keyword.test(posts.title) || keyword.test(posts.author.displayName) || keyword.test(posts.labels) || keyword.test(posts.content);
+	    	return !$scope.dataFilter || keyword.test(posts.title) || keyword.test(posts.location) || keyword.test(posts.division) || keyword.test(posts.description) || keyword.test(posts.benefits) || keyword.test(posts.responsibility) || keyword.test(posts.requirements) || keyword.test(posts.terms) || keyword.test(posts.salary);
 		};
 	});
 
 	mainApp.controller('applyController', function($scope, Job) {
 		$scope.title = 'Apply';
+		$scope.posts = Blog.get({id:$routeParams.id});
+		$scope.key = $routeParams.id;
 	});
 
 	mainApp.factory('Job',function($resource){

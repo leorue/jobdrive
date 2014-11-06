@@ -1,5 +1,14 @@
+<div class="apply">
+    <a class="close-apply" href="#description/{{ key }}">
+        <div class="lr">
+            <div class="rl">
+            </div>
+        </div>
+    </a>
+    <section>
+        <div class="container">
         <div class="row">
-            <h1>{{ job.title }} Application</h1>
+            <h1>{{ posts.postings[key].title }} Application</h1>
         </div>
             <form id="form" target="_self" onsubmit="" action="">
                 <fieldset>
@@ -85,3 +94,6 @@
 
                 <button id="send" class="btn btn-default" type="submit">Send</button>
             </form>
+            </div>
+        </section>
+</div>

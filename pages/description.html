@@ -1,5 +1,5 @@
 <div class="post">
-        <a class="close-post" href="#">
+        <a class="close-post" href="#board">
             <div class="lr">
                 <div class="rl">
                 </div>
@@ -7,13 +7,22 @@
         </a>
         <section id="post-intro">
         <div class="container">
-            <h1 class="post-title text-left">{{ posts.items[key].title }}</h1>
-            <h3 class="post-author text-left">{{ posts.items[key].author.displayName }} /// {{ posts.items[key].published | date:'fullDate' }}</h3>
+            <h1 class="post-title text-left">{{ posts.postings[key].title }}</h1>
+            <h3 class="post-author text-left">{{ posts.postings[key].division }} @ {{ posts.postings[key].location }}</h3>
+            {{ posts.postings[key].posted | date:'fullDate' }} /// 
+            {{ posts.postings[key].terms }} /// {{ posts.postings[key].salary }}
         </div>
         </section>
         <section class="contents">
             <div class="container">
-            	//content values formatted
+                <h3>Description</h3>
+            	{{ posts.postings[key].description }}
+                <h3>Responsibility</h3>
+                {{ posts.postings[key].responsibility }}
+                <h3>Requirements</h3>
+                {{ posts.postings[key].requirements }}
+                <h3>Benefits</h3>
+                {{ posts.postings[key].benefits }}
             </div>
         </section>
 </div>
