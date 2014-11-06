@@ -89,6 +89,7 @@ h1{
 .jobSearch {
 	width: 100%;
 	background-color: #333;
+	color: #000;
 	border: none;
 	padding: 1%;
 	font-size: 3em;
@@ -112,4 +113,39 @@ h1{
 
 .full-width{
 	width: 100%;
+}
+
+.close-post{
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	width: 75px;
+	height: 75px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.close-post:hover {
+    opacity: .3;
+}
+
+.close-post .lr {
+	z-index: 1051;
+	width: 1px;
+	height: 75px;
+	margin-left: 35px;
+	background-color: #3d3d3d;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.close-post .lr .rl {
+	z-index: 1052;
+	width: 1px;
+	height: 75px;
+	background-color: #3d3d3d;
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
 }

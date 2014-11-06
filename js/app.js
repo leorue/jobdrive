@@ -41,7 +41,7 @@
 
 	mainApp.controller('descriptionController', function($scope, $route, $routeParams, Job) {
 		$scope.title = 'Job Description';
-		$scope.posts = Blog.get({id:$routeParams.id});
+		$scope.posts = Job.get({id:$routeParams.id});
 		$scope.key = $routeParams.id;
 	   	$scope.searchFilter = function (post) {
 	    var keyword = new RegExp($scope.dataFilter, 'i');
@@ -51,7 +51,7 @@
 
 	mainApp.controller('applyController', function($scope, $route, $routeParams, Job) {
 		$scope.title = 'Apply';
-		$scope.posts = Blog.get({id:$routeParams.id});
+		$scope.posts = Job.get({id:$routeParams.id});
 		$scope.key = $routeParams.id;
 	});
 
