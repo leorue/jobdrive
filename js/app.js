@@ -41,7 +41,11 @@
 
 	mainApp.controller('descriptionController', function($scope, $route, Job) {
 		$scope.title = 'Job Description';
-		$scope.posts = Blog.get({id:$stateParams.id});
+		$scope.posts = Blog.get({name:$stateParams.name});
+	   	$scope.searchFilter = function (post) {
+	    var keyword = new RegExp($scope.dataFilter, 'i');
+	    	return !$scope.dataFilter || keyword.test(posts.title) || keyword.test(posts.author.displayName) || keyword.test(posts.labels) || keyword.test(posts.content);
+		};
 	});
 
 	mainApp.controller('applyController', function($scope, Job) {
