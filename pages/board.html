@@ -5,7 +5,7 @@
 	</header>
 	<section id="job-postings">
 	    <input class="jobSearch" type="text" ng-model="dataFilter" placeholder="Search..."/></td>
-		<div class="row jobpost text-center" ng-repeat="(key, post) in posts.postings">
+		<div class="row jobpost text-center" ng-repeat="(key, post) in posts.postings | filter: dataFilter">
 			<a href="#{{ jobtitle }}">
 			<h3>{{ posts.postings[key].division }} @ {{ posts.postings[key].location }}</h3>
 			<h1>{{ posts.postings[key].title }}</h1>
