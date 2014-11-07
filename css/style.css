@@ -22,7 +22,7 @@ h1{
 
 #careers-header {
 	width: 100%;
-	height: 500px;
+	height: 900px;
 	padding-top: 120px;
 	background: url('../images/break.jpg') no-repeat center center scroll;
 	-webkit-background-size: cover;
@@ -32,6 +32,11 @@ h1{
 	color: #efefef;
 	text-align: center;
 }
+#careers-header h1{
+	padding-top: 10%;
+	font-size: 12em;
+}
+#careers-header h4{font-size: 3em;}
 
 #board-header {
 	width: 100%;
@@ -49,8 +54,8 @@ h1{
 #careers-footer {
 	background: #60766D;
 	color: #fff;
-	padding: 70px 0;
-	height: 300px;
+	padding: 45px 0;
+	height: 150px;
 }
 
 #careers-footer a{color: #fff;}
@@ -80,7 +85,7 @@ h1{
 
 .jobpost {
 	width: 100%;
-	background: #efefef;
+	background: #252525;
 	padding: 5%;
 	margin: 0;
 }
@@ -100,13 +105,13 @@ h1{
 
 #testimony{
 	width:100%;
-	background-color:#f7f7f7;
+	background-color:#252525;
 
 }
 #testimony h1{
 	text-align:center;
 	margin:92px 0 25px 0;
-	color:#565656;
+	color:#efefef;
 }
 #testimony p{
 	text-align:center;
@@ -205,10 +210,31 @@ h1{
 	-ms-transform: rotate(90deg);
 	transform: rotate(90deg);
 }
+#team-preview{
+    padding-top: 110px;
+    padding-bottom: 60px;
+    background-color: #C0BEB3;
+    z-index: 100;
+}
+
+#social-preview{
+    padding-top: 110px;
+    padding-bottom: 60px;
+    background-color: #C0BEB3;
+    z-index: 100;
+}
+#benefits-preview {
+    padding-top: 110px;
+    padding-bottom: 60px;
+    background-color: #C0BEB3;
+    z-index: 100;
+}
 
 #culture-preview {
     padding-top: 110px;
     padding-bottom: 60px;
+    background-color: #C0BEB3;
+    z-index: 100;
 }
 
 #culture-preview h2 {
@@ -313,7 +339,7 @@ h1{
 
 
 .whiteBox{
-    background:white;
+    background: #C0BEB3;
 }
 
 .blackBox{
@@ -372,14 +398,15 @@ h1{
     letter-spacing:4px;
 }
 
-#benefits-preview{
-    background-color: white;
-}
 #benefits-preview .container{
     padding-top:200px;
 }
 
-
+.bgLogo{
+	margin-left: 100px;
+	width: 35%;
+	z-index: 1;
+}
 
 .aboutIconWrapper{
     position:absolute;
@@ -392,12 +419,42 @@ h1{
 
 .aboutIconWrapper{
     font-size:80px;
-    color:#f5f5f5;
+    color:#ABB8A7;
     z-index:0;
 
+}
+
+#intro{
+	background-color: #60766D;
+	color: #efefef;
+}
+
+.content{
+	padding: 50px 0;
 }
 
 .aboutItem{
     margin-top:30px;
     margin-bottom:30px;
+}
+
+.team-member {
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.team-member img {
+	margin: 0 auto;
+	border: 7px solid #fff;
+}
+
+.team-member h4 {
+	color: #efefef;
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-transform: none;
+}
+
+.team-member p {
+    margin-top: 0;
 }
