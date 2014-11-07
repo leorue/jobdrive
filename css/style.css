@@ -37,7 +37,7 @@ h1{
 	width: 100%;
 	height: 500px;
 	padding-top: 120px;
-	background: #00663B;
+	background: #60766D;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -47,7 +47,7 @@ h1{
 }
 
 #careers-footer {
-	background: #00663B;
+	background: #60766D;
 	color: #fff;
 	padding: 70px 0;
 	height: 300px;
@@ -55,7 +55,7 @@ h1{
 
 #department-header{
 	text-align: center;
-	background: #00663B;
+	background: #60766D;
 	color: #efefef;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -83,7 +83,7 @@ h1{
 }
 
 .jobpost:hover{
-	background: #00663B;
+	background: #60766D;
 }
 
 .jobSearch {
